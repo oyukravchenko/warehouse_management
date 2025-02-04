@@ -19,4 +19,4 @@ jobs: # jobs. We will have two jobs (test and publish) with multiple steps.
       - uses: actions/checkout@v4
       - name: tests
         run: |
-          poetry run python -m pytest
+          pip install poetry && poetry install --with dev && poetry run python -m pytest
